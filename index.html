@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badza Tech Solutions | Professional Website Building</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary:#2979FF;
+            --dark:#0A0A0A;
+            --light:#F5F8FF;
+            --white:#FFFFFF;
+            --radius:14px;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background: white;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: linear-gradient(135deg,#2979FF,#57B5FF);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            color:white;
+            font-size: 18px;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 110px 8%;
+            background: linear-gradient(
+                rgba(0,0,0,0.45), 
+                rgba(0,0,0,0.45)
+            ), 
+            url('https://images.unsplash.com/photo-1525182008055-f88b95ff7980?q=80&w=1400') center/cover no-repeat;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3.6rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            margin-top: 16px;
+            font-size: 1.3rem;
+            opacity: 0.92;
+        }
+
+        .btn {
+            margin-top: 30px;
+            padding: 14px 28px;
+            border-radius: var(--radius);
+            border: none;
+            background: var(--primary);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #1f63d9;
+        }
+
+        /* ===== INSANE PRICING SECTION ===== */
+
+.pricing.insane {
+    padding: 120px 0;
+    background: radial-gradient(circle at top, #1a1a1a, #000);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Neon floating light streaks */
+.pricing.insane::before,
+.pricing.insane::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(93,78,255,0.4), transparent);
+    filter: blur(120px);
+    animation: floatLights 10s infinite linear;
+}
+
+.pricing.insane::before {
+    top: -100px;
+    left: -100px;
+}
+
+.pricing.insane::after {
+    bottom: -100px;
+    right: -100px;
+    animation-direction: reverse;
+}
+
+@keyframes floatLights {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(120px); }
+    100% { transform: translateX(0px); }
+}
+
+.section-title {
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+/* ===== CARD ===== */
+
+.insane-card {
+    width: 420px;
+    padding: 50px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 20px 70px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s ease;
+    animation: floatCard 4s infinite ease-in-out;
+}
+
+@keyframes floatCard {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+}
+
+.insane-card:hover {
+    transform: translateY(-18px) scale(1.03);
+    box-shadow: 0 25px 90px rgba(120, 100, 255, 0.5);
+}
+
+/* Neon Glow */
+.insane-card .glow {
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 180deg, #6a5cff, #ae44ff, #6a5cff);
+    filter: blur(90px);
+    opacity: 0.18;
+    z-index: -1;
+    animation: spinGlow 14s infinite linear;
+}
+
+@keyframes spinGlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Shine on hover */
+.insane-card .shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.25),
+        transparent
+    );
+    transform: skewX(-20deg);
+    transition: 0.6s ease;
+}
+
+.insane-card:hover .shine {
+    left: 200%;
+}
+
+.insane-card h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 65px;
+    font-weight: 900;
+    margin: 10px 0;
+    background: linear-gradient(90deg, #7a6bff, #b764ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.tag {
+    background: rgba(255,255,255,0.1);
+    padding: 6px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+.pricing-features li {
+    margin: 15px 0;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Button */
+.insane-btn {
+    display: inline-block;
+    background: linear-gradient(120deg, #6a5cff, #b964ff);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.insane-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #8a74ff;
+}
+
+        /* WHY US SECTION */
+        .section {
+            padding: 90px 10%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2.4rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .why-card {
+            background:white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.07);
+            transition: 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            color: var(--primary);
+        }
+
+        footer {
+            background:white;
+            padding: 30px;
+            text-align:center;
+            color:#666;
+            margin-top:80px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="brand">
+        <div class="logo">BTS</div>
+        <h2>Badza Tech Solutions</h2>
+    </div>
+
+    <nav>
+        <a href="index.html" style="color:#2979FF;">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>We Build Professional Websites.</h1>
+    <p>Badza Tech Solutions offers ONE elite service: custom website design and development for businesses that want to stand out.</p>
+
+    <a class="btn" href="services.html">View Our Service</a>
+</section>
+<!-- ===================== INSANE PRICING ===================== -->
+<section id="pricing" class="pricing insane">
+    <div class="container">
+        <h2 class="section-title">Website Pricing</h2>
+        <p class="section-subtitle">High-end website build at an affordable rate.</p>
+
+        <div class="pricing-grid">
+            <div class="pricing-card insane-card">
+                <div class="glow"></div>
+                <div class="shine"></div>
+
+                <h3>Full Website Package</h3>
+
+                <p class="price">$299</p>
+                <span class="tag">One-Time Payment</span>
+
+                <ul class="pricing-features">
+                    <li>✨ Custom 5-Page Website</li>
+                    <li>⚡ Lightning-Fast Optimization</li>
+                    <li>📱 Full Mobile Responsive</li>
+                    <li>🎨 Premium UI/UX Visual Design</li>
+                    <li>🔒 Secure & Reliable Structure</li>
+                    <li>📈 SEO-Optimized Setup</li>
+                    <li>🛠 2 Free Revisions</li>
+                </ul>
+
+                <a href="#contact" class="btn-pricing insane-btn">Start Your Website</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- WHY CHOOSE US -->
+<section class="section">
+    <h2>Why Choose Us?</h2>
+    <p>We don’t do everything — we specialize in website building to deliver PERFECT results.</p>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <div class="icon">🚀</div>
+            <h3>Fast & Modern</h3>
+            <p>Your site loads fast, looks clean, and feels premium.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="icon">📱</div>
+            <h3>Mobile-Friendly</h3>
+            <p>Perfect experience on every device — phones, tablets, laptops.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="icon">🎨</div>
+            <h3>Custom Designed</h3>
+            <p>No templates — we build your site to match your brand.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="icon">💼</div>
+            <h3>Business-Ready</h3>
+            <p>Your website comes ready with home, about, services, and contact pages.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2025 Badza Tech Solutions — Professional Website Building Only.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Badza Tech Solutions</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("YOUR_PUBLIC_KEY"); // <-- replace this
+        })();
+    </script>
+
+    <style>
+        .contact-wrapper {
+            max-width: 600px;
+            margin: 80px auto;
+            background: #111827;
+            padding: 30px;
+            border-radius: 14px;
+            color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            text-align: center;
+        }
+        .contact-wrapper input,
+        .contact-wrapper textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+        }
+        .contact-wrapper button {
+            width: 100%;
+            background: #6366f1;
+            padding: 14px;
+            border: none;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            color: white;
+            transition: 0.3s;
+        }
+        .contact-wrapper button:hover {
+            background: #4f46e5;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Badza Tech Solutions</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact-wrapper">
+        <h2>Contact Us</h2>
+        <p>Have a question or want to work together? Send us a message!</p>
+
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <p id="statusMessage" style="margin-top:15px;"></p>
+    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+                .then(
+                    function () {
+                        document.getElementById("statusMessage").innerHTML =
+                            "Message sent successfully! We'll get back to you ASAP.";
+                        document.getElementById("statusMessage").style.color = "lightgreen";
+                    },
+                    function (error) {
+                        document.getElementById("statusMessage").innerHTML =
+                            "Failed to send message. Please try again.";
+                        document.getElementById("statusMessage").style.color = "red";
+                    }
+                );
+        });
+    </script>
+</body>
+</html>

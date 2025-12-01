@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Badza Tech Solutions</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary:#2979FF;
+            --dark:#0A0A0A;
+            --light:#F5F8FF;
+            --white:#FFFFFF;
+            --radius:14px;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background: white;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #2979FF, #57B5FF);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* HERO */
+        .hero {
+            padding: 100px 8%;
+            text-align: center;
+            background: linear-gradient(
+                rgba(0,0,0,0.4), 
+                rgba(0,0,0,0.4)
+            ),
+            url("https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1400") center/cover no-repeat;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+        }
+
+        .hero p {
+            margin-top: 10px;
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        /* ONLY SERVICE SECTION */
+        .service-area {
+            padding: 90px 10%;
+        }
+
+        .big-card {
+            background: white;
+            padding: 60px;
+            border-radius: var(--radius);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+        }
+
+        .big-card h2 {
+            font-size: 2.6rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .big-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .points {
+            margin-top: 30px;
+            padding-left: 20px;
+        }
+
+        .points li {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="brand">
+        <div class="logo">BTS</div>
+        <h2>Badza Tech Solutions</h2>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html" style="color:#2979FF;">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Professional Website Building</h1>
+    <p>We create stunning, modern, and high-performing websites for your business.</p>
+</section>
+
+<!-- SINGLE SERVICE CARD -->
+<section class="service-area">
+    <div class="big-card">
+        <div class="icon">💻</div>
+
+        <h2>Website Design & Development</h2>
+
+        <p>Badza Tech Solutions specializes in clean, modern, and responsive websites built to make your business look professional and attract customers. Whether you're a startup, entrepreneur, or small business — we build websites that *convert*.</p>
+
+        <ul class="points">
+            <li>✔ Fully custom website design</li>
+            <li>✔ Mobile-friendly and fast loading</li>
+            <li>✔ Business-ready home, about, services & contact pages</li>
+            <li>✔ Professional branding and colors</li>
+            <li>✔ SEO-ready structure</li>
+            <li>✔ Training on how to update your site</li>
+        </ul>
+
+        <br><br>
+
+        <h3 style="color:#2979FF;">Starting at: <b>$300 - $800+</b></h3>
+        <p>(Price depends on number of pages and complexity)</p>
+    </div>
+</section>
+
+<footer>
+    © 2025 Badza Tech Solutions — All Rights Reserved.
+</footer>
+
+</body>
+</html>
